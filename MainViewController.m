@@ -39,7 +39,7 @@
 }
 
 - (void)buttonPressed {
-    
+    self.label.text = self.textField.text;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
