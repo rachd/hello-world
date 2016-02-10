@@ -25,8 +25,21 @@
                                                                    300.0f, 30.0f)];
     self.textField.delegate = self;
     self.textField.borderStyle = UITextBorderStyleRoundedRect;
-    
     [self.view addSubview:self.textField];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    button.frame = CGRectMake(110.0f, 200.0f, 100.0f, 30.0f);
+    [button addTarget:self action:@selector(buttonPressed) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Press Me" forState:UIControlStateNormal];
+    [self.view addSubview:button];
+    
+    self.label = [[UILabel alloc] initWithFrame:CGRectMake(115.0f, 150.0f, 200.0f, 30.0f)];
+    self.label.text = @"Hello World!";
+    [self.view addSubview:self.label];
+}
+
+- (void)buttonPressed {
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
