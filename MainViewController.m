@@ -10,6 +10,9 @@
 
 @interface MainViewController ()
 
+@property (nonatomic, strong) UITextField *textField;
+@property (nonatomic, strong) UILabel *label;
+
 @end
 
 @implementation MainViewController
@@ -17,6 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.textField = [[UITextField alloc] initWithFrame:CGRectMake(10.0f, 30.0f,
+                                                                   300.0f, 30.0f)];
+    self.textField.delegate = self;
+    self.textField.borderStyle = UITextBorderStyleRoundedRect;
+    
+    [self.view addSubview:self.textField];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning {
