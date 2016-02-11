@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import "ColorsViewController.h"
+#import "RandomNumberViewController.h"
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -21,8 +23,11 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    MainViewController *viewController = [[MainViewController alloc] init];
-    self.window.rootViewController = viewController;
+    MainViewController *mainViewController = [[MainViewController alloc] init];
+    ColorsViewController *colorsViewController = [[ColorsViewController alloc] init];
+    RandomNumberViewController *randomNumberViewController = [[RandomNumberViewController alloc] init];
+    
+    self.window.rootViewController = colorsViewController;
     
     [self.window makeKeyAndVisible];
     
