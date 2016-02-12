@@ -17,6 +17,16 @@
 
 @implementation ColorsViewController
 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.tabBarItem.title = @"Colors";
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -32,7 +42,7 @@
     [self.view addSubview:button];
     
     self.colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor blackColor], [UIColor greenColor], [UIColor blueColor], [UIColor brownColor], [UIColor yellowColor], [UIColor whiteColor], [UIColor cyanColor], [UIColor magentaColor], [UIColor orangeColor], [UIColor purpleColor], nil];
-    
+  
 }
 
 

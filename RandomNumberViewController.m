@@ -16,6 +16,16 @@
 
 @implementation RandomNumberViewController
 
+- (instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        self.tabBarItem.title = @"Numbers";
+    }
+    
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

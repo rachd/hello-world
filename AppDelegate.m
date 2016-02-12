@@ -27,7 +27,10 @@
     ColorsViewController *colorsViewController = [[ColorsViewController alloc] init];
     RandomNumberViewController *randomNumberViewController = [[RandomNumberViewController alloc] init];
     
-    self.window.rootViewController = colorsViewController;
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[mainViewController, colorsViewController, randomNumberViewController]];
+    
+    self.window.rootViewController = tabBarController;
     
     [self.window makeKeyAndVisible];
     
